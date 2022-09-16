@@ -1,0 +1,138 @@
+/**********************************************
+                Global styles
+**********************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/**********************************************
+                Specific styles
+**********************************************/
+.container {
+  height: 100vh;
+  background-image: url(../img/clouds.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#myHeader,
+#myFooter {
+  text-align: center;
+  background-color: #4d94ff;
+  color: white;
+  padding: 20px;
+  opacity: .6;
+}
+
+#myFooter {
+	margin-top: 10px;
+}
+
+#myFooter a {
+  color: white;
+  text-decoration: none;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 302px;
+  height: 302px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 8px;
+  margin: 70px auto 20px;
+  animation: boxAnimation 2s ease 0s 1 normal forwards;
+}
+
+@keyframes boxAnimation {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.box>img {
+  opacity: .5;
+}
+
+.xo {
+  display: none;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border: 1px solid #eee;
+  background: blue;
+  font-size: 44px;
+  color: #fff;
+  text-align: center;
+}
+
+.btnHolder {
+  min-height: 110px;
+}
+
+#startGame,
+#restartGame,
+#computerPlayer,
+#computerPlayerOff {
+  display: block;
+  min-width: 201px;
+  margin: 5px auto;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 20px;
+  background-color: blue;
+  color: #fff;
+  border-color: #fff;
+  opacity: .8;
+}
+
+#restartGame,
+#computerPlayer,
+#computerPlayerOff {
+  display: none;
+}
+
+#startGame:hover,
+#restartGame:hover,
+#computerPlayer:hover,
+#computerPlayerOff:hover {
+  background-color: #fff;
+  color: blue;
+  border-color: blue;
+}
+
+#message {
+  display: block;
+  text-align: center;
+  font-size: 22px;
+  color: red;
+  margin: 0 auto;
+  text-shadow: 5px 5px 10px #000000, 5px 5px 10px #000;
+}
